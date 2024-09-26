@@ -1,0 +1,68 @@
+/* Center the entire content within the viewport */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  min-height: 100vh;         /* Ensure the body takes up full viewport height */
+  flex-direction: column;    /* Stack the title and the company list */
+}
+
+/* Style the main title */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Company list */
+#company-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Two columns for larger screens */
+  gap: 20px;                       /* Spacing between list items */
+  max-width: 800px;                /* Limit width to avoid stretching */
+  margin: 0 auto;
+}
+
+/* List item styles */
+li {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.05);          /* Subtle scaling effect on hover */
+}
+
+/* Image styling */
+img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Text inside each company item */
+li h2 {
+  margin: 0 0 10px;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Responsibility Index</title>
-  <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Responsibility Index</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.7/css/pico.min.css">
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-  <h1>Social Responsibility Index</h1>
-  <ul>
-    <% companies.forEach(company => { %>
-      <li>
-        <img src="<%= company.logo %>" alt="<%= company.name %> logo" width="100">
-        <h2><%= company.name %></h2>
-        <p><%= company.mission %></p>
-        <p>Lobbying Spend: $<%= company.lobbyingSpend.toLocaleString() %></p>
-        <a href="/company/<%= company.id %>">View Details</a>
-      </li>
-    <% }); %>
-  </ul>
+    <h1>Social Responsibility Index</h1>
+    <ul id="company-list">
+        <% companies.forEach(company => { %>
+            <li>
+                <img src="<%= company.logo %>" alt="<%= company.name %> logo" width="100">
+                <h2><%= company.name %></h2>
+                <p><%= company.mission %></p>
+                <p>Lobbying Spend: $<%= company.lobbyingSpend.toLocaleString() %></p>
+                <a href="/company/<%= company.id %>">View Details</a>
+            </li>
+        <% }); %>
+    </ul>
 </body>
 </html>
+
