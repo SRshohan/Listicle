@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <h1>Social Responsibility Index</h1>
-    <ul id="company-list">
-        <% companies.forEach(company => { %>
-            <li>
-                <img src="<%= company.logo %>" alt="<%= company.name %> logo" width="100">
-                <h2><%= company.name %></h2>
-                <p><%= company.mission %></p>
-                <p>Lobbying Spend: $<%= company.lobbyingSpend.toLocaleString() %></p>
-                <a href="/company/<%= company.id %>">View Details</a>
-            </li>
-        <% }); %>
-    </ul>
+    <header>
+        <h1>Social Responsibility Index</h1>
+    </header>
+    
+    <main class="container">
+        <div class="grid">
+            <% companies.forEach(company => { %>
+                <article class="card">
+                    <header>
+                        <img src="<%= company.logo %>" alt="<%= company.name %> logo" width="100" class="company-logo">
+                        <h2><%= company.name %></h2>
+                    </header>
+                    <p><%= company.mission %></p>
+                    <p><strong>Lobbying Spend:</strong> $<%= company.lobbyingSpend.toLocaleString() %></p>
+                    <footer>
+                        <a href="/company/<%= company.id %>" role="button" class="secondary">View Details</a>
+                    </footer>
+                </article>
+            <% }); %>
+        </div>
+    </main>
 </body>
 </html>
+
 

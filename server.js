@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 
 app.get('/company/:id', (req, res) => {
     const company = companies.find(c => c.id === parseInt(req.params.id));
+
+    if (!company){
+        res.status(404).render('404');
+    }
     res.render('company', { company });
 })
 

@@ -1,68 +1,35 @@
-/* Center the entire content within the viewport */
+/* General styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Center vertically */
-  min-height: 100vh;         /* Ensure the body takes up full viewport height */
-  flex-direction: column;    /* Stack the title and the company list */
-}
-
-/* Style the main title */
-h1 {
-  color: #333;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Company list */
-#company-list {
-  list-style-type: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* Two columns for larger screens */
-  gap: 20px;                       /* Spacing between list items */
-  max-width: 800px;                /* Limit width to avoid stretching */
-  margin: 0 auto;
+  font-family: sans-serif;
 }
 
-/* List item styles */
-li {
-  background-color: #fff;
+/* Styling for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
-li:hover {
-  transform: scale(1.05);          /* Subtle scaling effect on hover */
-}
-
-/* Image styling */
-img {
-  width: 100px;
-  height: auto;
+.card img {
   margin-bottom: 15px;
-  border-radius: 8px;
 }
 
-/* Text inside each company item */
-li h2 {
-  margin: 0 0 10px;
+header h1 {
+  text-align: center;
 }
 
-a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #007BFF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+footer a {
+  display: block;
+  text-align: center;
+  padding: 10px;
 }
